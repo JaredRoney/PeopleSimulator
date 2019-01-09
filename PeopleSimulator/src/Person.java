@@ -2,6 +2,7 @@ class Person {
     public int age;
     private String name;
     private boolean depressed;
+    private boolean optimistic;
     private int happiness;
     public int income; //comment this out at the end
 
@@ -9,6 +10,7 @@ class Person {
         this.name = name;
         this.age = age;
         this.depressed = Math.random() < 0.15;
+        this.optimistic = Math.random() < 0.15;
         this.happiness = 50;
         this.income = 10000; //comment this out at the end
     }
@@ -43,6 +45,12 @@ class Person {
             depressed = false;
         }
         return depressed;
+    }
+    public boolean getOptimistic(){
+        if(depressed == false) {
+
+        }
+        return optimistic;
     }
     public int getHappiness(){
         if(depressed == true && age > 11){
