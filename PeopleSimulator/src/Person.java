@@ -47,17 +47,24 @@ class Person {
         return depressed;
     }
     public boolean getOptimistic(){
-        if(depressed == false) {
-
-        }
         return optimistic;
     }
+
     public int getHappiness(){
         if(depressed == true && age > 11){
             happiness = (int) Math.floor(Math.random() * 36);
-            if(income < 11000){
-                happiness -= (int) Math.floor(Math.random() * 6);
-            }
+        } else if(optimistic == true){
+            happiness += (int) Math.floor(Math.random() * 15);
+        }
+        if(income <= 11000){
+            happiness -= (int) Math.floor(Math.random() * 6);
+        } else if(income >= 130000){
+            happiness += (int) Math.floor(Math.random() * 10);
+        }
+        if(happiness > 100) {
+            happiness = 100;
+        } else if(happiness < 0) {
+            happiness = 0;
         }
         return happiness;
     }
