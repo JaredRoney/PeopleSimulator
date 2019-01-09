@@ -54,7 +54,13 @@ class Person {
         return happiness;
     }
 
-    public void changeHappiness() {
-        
+    public int changeHappiness(int percentChange) {
+        happiness += percentChange;
+        if(happiness > 100) {
+            happiness = 100;
+        } else if(happiness < 0) {
+            happiness = 0;
+        }
+        return happiness;
     }
 }
