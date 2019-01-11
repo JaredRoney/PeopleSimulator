@@ -47,6 +47,9 @@ class Person {
         return depressed;
     }
     public boolean getOptimistic(){
+        if(age == 0){
+            optimistic = Math.random() < 0.18;
+        }
         return optimistic;
     }
 
@@ -59,7 +62,7 @@ class Person {
         if(income <= 11000){
             happiness -= (int) Math.floor(Math.random() * 6);
         } else if(income >= 130000){
-            happiness += (int) Math.floor(Math.random() * 10);
+            happiness += (int) Math.floor(Math.random() * 15);
         }
         if(happiness > 100) {
             happiness = 100;
