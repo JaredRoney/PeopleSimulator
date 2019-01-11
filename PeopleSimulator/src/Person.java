@@ -69,9 +69,10 @@ class Person {
         } else if(happiness < 0) {
             happiness = 0;
         }
+
         return happiness;
     }
-
+//PUT IN JARED'S CODE
     public int changeHappiness(int percentChange) {
         happiness += percentChange;
         if(happiness > 100) {
