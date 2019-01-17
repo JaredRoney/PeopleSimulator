@@ -5,23 +5,24 @@ class Main {
 
         Society peopleTown = new Society(1000);
 
-        for(int i = 0; i < peopleTown.population; i++){
-            //the ArrayList method .get(i) is how to get the element at i
-            System.out.println(i + " " + peopleTown.people.get(i).getName() + " age = "+ peopleTown.people.get(i).getAge() +
-            " Depressed = "+ peopleTown.people.get(i).getDepressed() + " Optimistic = "+ peopleTown.people.get(i).getOptimistic()+
-            " Happiness = " + peopleTown.people.get(i).getHappiness() + "%");
-        }
 
 
 
 
 
 
-      for(int i = 0; i < 1000; i++) {
+
+
+      for(int i = 0; i < 50; i++) {
         peopleTown.cycleDay();
         //Write your print/tests in here if your feature should happen on a dialy basis
+            System.out.println(peopleTown.people.get(i).getName() + " age = " + peopleTown.people.get(i).getAge() + " Depressed = " + peopleTown.people.get(i).getDepressed() + " Optimistic = " + peopleTown.people.get(i).getOptimistic() +" Happiness = " + peopleTown.people.get(i).setHappiness() + "%");
 
-        
+
+
+             System.out.println(" Societal Happiness = " + peopleTown.societalHappiness() +"% ");
+
+
       }
 
       for(Person individual : peopleTown.people){
@@ -43,4 +44,5 @@ class Main {
 
     // This is the Places Code- Need help? Ask Brandon, Ian, or read the documentation provided.
 }
+
 
