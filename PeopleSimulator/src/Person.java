@@ -98,6 +98,10 @@ class Person {
         if(married == true){
             happiness += (int) Math.floor(Math.random() * 25) + 5;
         }
+        //for Jared's friendship thing
+        //  happiness += friendCount * 2;
+
+
        return happiness;
     }
     public void changeHappiness(int percentChange){

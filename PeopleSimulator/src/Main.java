@@ -5,14 +5,6 @@ class Main {
 
         Society peopleTown = new Society(1000);
 
-
-
-
-
-
-
-
-
       for(int i = 0; i < 50; i++) {
         peopleTown.cycleDay();
         //Write your print/tests in here if your feature should happen on a dialy basis
