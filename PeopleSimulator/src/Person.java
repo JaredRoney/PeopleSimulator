@@ -21,13 +21,6 @@ class Person {
     public int mill = bellCurve(50,25);
 
 
-
-
-
-
-
-
-
     public String getName() {
         return name;
     }
@@ -38,7 +31,7 @@ class Person {
 		this.age = age;
         this.depressed = Math.random() < 0.15;
         this.optimistic = Math.random() < 0.15;
-        this.happiness = ((int) Math.random()*10) + 60;  //start around 60 to have variation from person to person regardless of if they have outisde factors
+        this.happiness = (int) Math.floor(Math.random() * 5) + 60;  //start around 60 to have variation from person to person regardless of if they have outisde factors
         this.birthday = birthdate;
         this.gender = gender;
         this.place = place;
@@ -47,6 +40,7 @@ class Person {
             haves.add((int)(Math.random()*10));
             wants.add((int)(Math.random()*10));
         }
+        setHappiness();
     }
 
 
@@ -76,10 +70,8 @@ class Person {
         }
         return optimistic;
     }
-    public int getHappiness(){
-        return happiness;
-    }
-    public int setHappiness(){
+
+    public void setHappiness(){
         if(depressed == true && age > 11){
             happiness = (int) Math.floor(Math.random() * 30) + 6;
             if(happiness < 10){
@@ -98,14 +90,12 @@ class Person {
         if(married == true){
             happiness += (int) Math.floor(Math.random() * 25) + 5;
         }
-        //for Jared's friendship thing
-        //  happiness += friendCount * 2;
-
-
-       return happiness;
     }
     public void changeHappiness(int percentChange){
         percentChange += happiness;
+    }
+    public int getHappiness(){
+        return happiness;
     }
     public String getGender(){
         return gender;
