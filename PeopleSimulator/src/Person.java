@@ -38,7 +38,7 @@ class Person {
 		this.age = age;
         this.depressed = Math.random() < 0.15;
         this.optimistic = Math.random() < 0.15;
-        this.happiness = 60;  //start at 60 bc 50 felt too sad for a normal person
+        this.happiness = ((int) Math.random()*10) + 60;  //start around 60 to have variation from person to person regardless of if they have outisde factors
         this.birthday = birthdate;
         this.gender = gender;
         this.place = place;
